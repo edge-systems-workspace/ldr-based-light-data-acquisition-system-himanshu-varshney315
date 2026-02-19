@@ -10,7 +10,7 @@
  * The code is intentionally small and clear for educational and prototyping
  * use. It demonstrates analogRead, basic mapping, and serial output.
  *
- * @author
+ * @author himanshu gupta
  * @date 2026-02-17
  * @version 1.0
  */
