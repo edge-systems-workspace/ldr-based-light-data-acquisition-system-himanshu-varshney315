@@ -58,3 +58,15 @@ void setup() {
  * @note Adjust the map() parameters if your voltage divider produces a
  * different range or polarity.
  */
+void loop() {
+ // write your code here
+ int ldrRaw = analogRead(LDR_PIN);
+ int lightPerecentage = map(ldrRaw, 0, 1023, 0, 100);
+ Serial.println("LDRRaw");
+ Serial.println(ldrRaw);
+ Serial.println(" | light: ");
+ Serial.println(lightPerecentage);
+ Serial.println("%");
+ delay(500);
+
+}
