@@ -34,3 +34,27 @@
  *
  * @note This function is called once by the Arduino framework during startup.
  */
+void setup() {
+ // write your initialization code here
+ Serial.begin(9600);
+ pinMode(LDR_PIN,INPUT);
+ Serial.println("LDR test");
+
+}
+
+/**
+ * @brief Main Arduino loop that reads and reports light intensity.
+ *
+ * Reads the raw analog value from the LDR pin using analogRead(). The raw
+ * reading (0..1023) is converted to a simple percentage (0..100) using
+ * map(). The raw value and percentage are printed to the serial console.
+ * The loop then waits 500 ms before repeating.
+ *
+ * @details
+ * - Raw range: 0 (dark) .. 1023 (bright) depending on wiring and divider.
+ * - The map() call inverts the percentage so that 0 -> 100% (bright) and
+ *   1023 -> 0% (dark) to provide an intuitive "Light: X%" readout.
+ *
+ * @note Adjust the map() parameters if your voltage divider produces a
+ * different range or polarity.
+ */
